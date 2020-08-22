@@ -11,22 +11,22 @@ In this situation the MERGE STATEMENT helps us.
 
 1)
 Lets create the SOURCE AND TARGET table together.
+     ##
+    if OBJECT_ID('tempdb.dbo.##Source_Table', 'U') is not null
+    drop table ##Source_Table;
+    create table ##Source_Table (account_no varchar(12),amount numeric (18,4),date_transaction datetime)
 
-if OBJECT_ID('tempdb.dbo.##Source_Table', 'U') is not null
-  drop table ##Source_Table;
-  create table ##Source_Table (account_no varchar(12),amount numeric (18,4),date_transaction datetime)
-
-
-  insert into ##Source_Table values
-  ('AA111','17.85','2020-08-22'),
-  ('BB222','90.00','2020-08-25'),
-  ('CC333','300.55','2020-07-01'),
-  ('DD444','1000.00','2020-09-20')
+     ##
+    insert into ##Source_Table values
+    ('AA111','17.85','2020-08-22'),
+    ('BB222','90.00','2020-08-25'),
+    ('CC333','300.55','2020-07-01'),
+    ('DD444','1000.00','2020-09-20')
 
   --select * INTO ##Target_Table from ##Source_Table    We can create Table and insert ##Source_Table data's to ##Target_Table with SELECT INTO
 
 
-  ## 
+    ## 
     Now our #Source_Table and ##Target_Table dates are equal.
     select * from ##Source_Table
     select * from ##Target_Table
