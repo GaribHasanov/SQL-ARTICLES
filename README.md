@@ -52,8 +52,8 @@ if OBJECT_ID('tempdb.dbo.##Source_Table', 'U') is not null
   Lets create the MERGE statement and insert new datas to ##Target_Table from ##Source_Table
    
    
-   #Merge  ##Target_Table tt
-   #using ##Source_Table st
+    ##Merge  ##Target_Table tt
+    ##using ##Source_Table st
    on st.[account_no]=tt.[account_no] and st.[amount] = tt.[amount] and st.[date_transaction] = tt.[date_transaction]
    when NOT MATCHED BY TARGET
    then
