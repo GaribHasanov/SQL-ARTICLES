@@ -54,11 +54,11 @@ if OBJECT_ID('tempdb.dbo.##Source_Table', 'U') is not null
    
     ##Merge  ##Target_Table tt
     ##using ##Source_Table st
-   on st.[account_no]=tt.[account_no] and st.[amount] = tt.[amount] and st.[date_transaction] = tt.[date_transaction]
-   when NOT MATCHED BY TARGET
-   then
-   insert ( [account_no],[amount] ,[date_transaction])
-   values (st.[account_no], st.[amount] , st.[date_transaction]);
+    ##on st.[account_no]=tt.[account_no] and st.[amount] = tt.[amount] and st.[date_transaction] = tt.[date_transaction]
+    ##when NOT MATCHED BY TARGET
+    ##then
+    ##insert ( [account_no],[amount] ,[date_transaction])
+    ##values (st.[account_no], st.[amount] , st.[date_transaction]);
 
 
   The code above help us to insert only new inserted datas of ##Source_Table to ##Target_Table
