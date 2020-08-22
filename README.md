@@ -26,9 +26,10 @@ if OBJECT_ID('tempdb.dbo.##Source_Table', 'U') is not null
   --select * INTO ##Target_Table from ##Source_Table    We can create Table and insert ##Source_Table data's to ##Target_Table with SELECT INTO
 
 
-  ## Now our #Source_Table and ##Target_Table dates are equal.
-   select * from ##Source_Table
-   select * from ##Target_Table
+  ## 
+    Now our #Source_Table and ##Target_Table dates are equal.
+    select * from ##Source_Table
+    select * from ##Target_Table
 
  2)
 
