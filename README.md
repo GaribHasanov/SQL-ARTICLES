@@ -34,10 +34,11 @@ if OBJECT_ID('tempdb.dbo.##Source_Table', 'U') is not null
 
  Lets imagine that the ##Source_Table ia a transactional table and new event occured the new rows inserted.(For example by front application)
  But we are going to insert new datas to ##Source_Table manually.
+ 
      ##
-  insert into ##Source_Table values
-  ('AA111','38.22','2020-08-25'),
-  ('BB222','55.50','2020-09-30');
+    insert into ##Source_Table values
+    ('AA111','38.22','2020-08-25'),
+    ('BB222','55.50','2020-09-30');
 
   Now the ##Source_Table rows is not equal to ##Target_Table
   We need INSERT only the new inserted rows to ##Target_Table from ##Source_Table
