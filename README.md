@@ -11,6 +11,7 @@ In this situation the MERGE STATEMENT helps us.
 
 1)
 Lets create the SOURCE AND TARGET table together.
+
      ##
      if OBJECT_ID('tempdb.dbo.##Source_Table', 'U') is not null
      drop table ##Source_Table;
