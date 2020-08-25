@@ -12,9 +12,9 @@ In this situation the MERGE STATEMENT helps us.
 1)
 Lets create the SOURCE AND TARGET table together.
      ##
-    if OBJECT_ID('tempdb.dbo.##Source_Table', 'U') is not null
-    drop table ##Source_Table;
-    create table ##Source_Table (account_no varchar(12),amount numeric (18,4),date_transaction datetime)
+     if OBJECT_ID('tempdb.dbo.##Source_Table', 'U') is not null
+     drop table ##Source_Table;
+     create table ##Source_Table (account_no varchar(12),amount numeric (18,4),date_transaction datetime);
 
      ##
     insert into ##Source_Table values
